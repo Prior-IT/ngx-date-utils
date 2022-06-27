@@ -2,7 +2,6 @@ image: "node:14-alpine"
 
 stages:
     - test
-    - quality
     - deploy
 
 include:
@@ -15,13 +14,13 @@ unit_tests:
         - npm test
 
 linting:
-    stage: quality
+    stage: test
     script:
         - npm ci
         - npm run lint
 
 code_quality:
-    stage: quality
+    stage: test
     rules:
         - if: $CODE_QUALITY_DISABLED
           when: never
@@ -31,7 +30,7 @@ code_quality:
 
 code_quality_html:
     extends: code_quality
-    stage: quality
+    stage: test
     variables:
         REPORT_FORMAT: html
     artifacts:
