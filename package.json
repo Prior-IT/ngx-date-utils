@@ -18,7 +18,6 @@
         "luxon"
     ],
     "author": "Robin Arys (robin.arys@prior-it.be)",
-    "private": true,
     "license": "UNLICENSED",
     "bugs": {
         "url": "https://gitlab.com/priorit/piworks/pidateutils-ts/issues"
