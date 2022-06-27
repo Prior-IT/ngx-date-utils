@@ -7,7 +7,28 @@
 # See https://docs.gitlab.com/ee/ci/variables/#cicd-variable-precedence
 stages:
 - test
+- quality
+
+include:
+  - template: Security/SAST.gitlab-ci.yml
+  - template: Code-Quality.gitlab-ci.yml
+
 sast:
   stage: test
-include:
-- template: Security/SAST.gitlab-ci.yml
+
+code_quality:
+  stage: quality
+  rules:
+    - if: $CODE_QUALITY_DISABLED
+      when: never
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event" # Run code quality job in merge request pipelines
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH      # Run code quality job in pipelines on the default branch (but not in other branch pipelines)
+    - if: $CI_COMMIT_TAG                               # Run code quality job in pipelines for tags
+
+code_quality_html:
+  extends: code_quality
+  stage: quality
+  variables:
+    REPORT_FORMAT: html
+  artifacts:
+    paths: [gl-code-quality-report.html]
