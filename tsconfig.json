@@ -1,7 +1,7 @@
 {
     "compileOnSave": false,
     "compilerOptions": {
-        "baseUrl": "lib",
+        "baseUrl": "src",
         "outDir": "./dist",
         "forceConsistentCasingInFileNames": true,
         "strict": true,
@@ -23,7 +23,7 @@
         ],
     },
     "files": [
-        "lib/index.ts",
+        "src/index.ts",
     ],
     "exclude": [
         "**/*.spec.ts",

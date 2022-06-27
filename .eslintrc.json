@@ -1,6 +1,6 @@
 {
     "extends": "eslint:recommended",
-    "ignorePatterns": ["lib/**/*.spec.ts"],
+    "ignorePatterns": ["src/**/*.spec.ts"],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
         "project": ["tsconfig.json"],
