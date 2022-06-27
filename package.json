@@ -6,7 +6,7 @@
     "scripts": {
         "test": "jasmine --config=jasmine.json",
         "build": "tsc -p tsconfig.json",
-        "lint": "eslint -c .eslintrc.json lib/*"
+        "lint": "eslint -c .eslintrc.json src/*"
     },
     "repository": {
         "type": "git",
