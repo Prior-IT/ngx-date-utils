@@ -10,15 +10,15 @@ include:
 
 unit_tests:
     stage: test
-    before_script:
+    script:
         - npm ci
-    script: npm test
+        - npm test
 
 linting:
     stage: quality
-    before_script:
+    script:
         - npm ci
-    script: npm run lint
+        - npm run lint
 
 code_quality:
     stage: quality
@@ -41,6 +41,7 @@ deploy:
     stage: deploy
     script:
         - echo "//${CI_SERVER_HOST}/api/v4/projects/${CI_PROJECT_ID}/packages/npm/:_authToken=${CI_JOB_TOKEN}">.npmrc
+        - npm ci
         - npm run build
         - npm publish
     rules:
