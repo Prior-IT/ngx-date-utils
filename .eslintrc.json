@@ -1,0 +1,46 @@
+{
+    "extends": "eslint:recommended",
+    "ignorePatterns": ["lib/**/*.spec.ts"],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "project": ["tsconfig.json"],
+        "createDefaultProgram": true
+    },
+    "plugins": [
+        "@typescript-eslint"
+    ],
+    "rules": {
+        "quotes": [
+            "error",
+            "single",
+            { "allowTemplateLiterals": true }
+        ],
+        "semi": "error",
+        "indent": ["error", 4],
+        "no-implicit-coercion": "error",
+        "no-restricted-syntax": "off",
+        "no-console": ["warn", { "allow": ["debug", "error", "trace"] }],
+        "brace-style": "error",
+        "camelcase": ["error", { "ignoreDestructuring": true }],
+        "capitalized-comments": ["error", "always", { "ignoreConsecutiveComments": true, "ignorePattern": "import"}],
+        "comma-dangle": ["error", "always-multiline"],
+        "comma-spacing": "error",
+        "default-param-last": "error",
+        "dot-notation": "error",
+        "keyword-spacing": "warn",
+        "no-extra-parens": "error",
+        "no-implied-eval": "error",
+        "no-loss-of-precision": "warn",
+        // "no-magic-numbers": [
+        //     "error",
+        //     {
+        //         "ignoreDefaultValues": true,
+        //         "ignoreArrayIndexes": true
+        //     }
+        // ],
+        "no-redeclare": "error",
+        "no-shadow": "error",
+        "no-unused-expressions": "warn",
+        "no-unused-vars": "off"
+    }
+}
