@@ -1,8 +1,9 @@
 {
     "compileOnSave": false,
     "compilerOptions": {
-        "baseUrl": "src",
-        "outDir": "./dist",
+        "baseUrl": ".",
+        "rootDir": "src",
+        "outDir": "dist",
         "forceConsistentCasingInFileNames": true,
         "strict": true,
         "noImplicitOverride": true,
@@ -15,17 +16,17 @@
         "experimentalDecorators": true,
         "moduleResolution": "node",
         "importHelpers": true,
-        "target": "es2017",
-        "module": "es2020",
+        "target": "esnext",
+        "module": "esnext",
         "lib": [
-            "es2020",
-            "dom",
-        ],
+            "esnext",
+            "dom"
+        ]
     },
     "files": [
-        "src/index.ts",
+        "src/index.ts"
     ],
     "exclude": [
-        "**/*.spec.ts",
-    ],
+        "**/*.spec.ts"
+    ]
 }

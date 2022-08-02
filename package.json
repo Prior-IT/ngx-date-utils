@@ -2,10 +2,17 @@
     "name": "@priorit/dateutils",
     "version": "1.0.0",
     "description": "Utility functions to better handle dates in TypeScript",
-    "main": "src/index.ts",
+    "main": "dist/index.js",
+    "module": "dist/index.js",
+    "files": [
+        "src",
+        "dist"
+    ],
     "scripts": {
+        "prepare": "tsc -p tsconfig.json",
         "test": "jasmine --config=jasmine.json",
         "build": "tsc -p tsconfig.json",
+        "watch": "tsc -w -p tsconfig.json",
         "codelint": "eslint -c .eslintrc.json src/*",
         "stylelint": "npx stylelint '**/*.scss'"
     },
@@ -21,7 +28,7 @@
     "author": "Robin Arys (robin.arys@prior-it.be)",
     "license": "UNLICENSED",
     "bugs": {
-        "url": "https://gitlab.com/priorit/piworks/pidateutils-ts/issues"
+        "url": "https://app.clickup.com/24444453/v/li/204457483"
     },
     "homepage": "https://gitlab.com/priorit/piworks/pidateutils-ts#readme",
     "dependencies": {
