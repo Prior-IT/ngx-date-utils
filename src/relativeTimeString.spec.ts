@@ -1,15 +1,11 @@
 import { getRelativeTimeString } from './relativeTimeString';
 import { DateTime, Duration } from 'luxon';
 
-export function $localize(messageParts: TemplateStringsArray, ...expressions: readonly any[]): string {
+export function $localize(_messageParts: TemplateStringsArray, ..._expressions: readonly any[]): string {
     return " test ";
 }
 
 describe("RelativeTimeString", () => {
-    it("tests work", () => {
-        expect(true).toBe(true);
-    });
-
     it("getRelativeTimeString returns something", () => {
         var today = DateTime.now();
         var result = getRelativeTimeString(today, true, 1);

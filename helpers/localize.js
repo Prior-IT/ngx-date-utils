@@ -1,1 +1,1 @@
-import '@angular/localize/init';
+import '@angular/localize/bundles/localize-init.umd.js';
