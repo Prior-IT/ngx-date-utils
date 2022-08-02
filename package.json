@@ -4,6 +4,7 @@
     "description": "Utility functions to better handle dates in TypeScript",
     "main": "dist/index.js",
     "module": "dist/index.js",
+    "types": "dist/index.d.ts",
     "files": [
         "src",
         "dist"
