@@ -1,6 +1,6 @@
 {
     "name": "@priorit/dateutils",
-    "version": "1.0.2-beta3",
+    "version": "1.0.2-beta4",
     "description": "Utility functions to better handle dates in TypeScript",
     "main": "dist/index.js",
     "module": "src/index.js",
