@@ -1,16 +1,16 @@
 {
     "name": "@priorit/dateutils",
-    "version": "1.0.1",
+    "version": "1.0.2-beta2",
     "description": "Utility functions to better handle dates in TypeScript",
     "main": "dist/index.js",
-    "module": "dist/index.js",
+    "module": "src/index.js",
     "types": "dist/index.d.ts",
     "files": [
         "src",
         "dist"
     ],
     "scripts": {
-        "prepare": "tsc -p tsconfig.json",
+        "prepack": "tsc -p tsconfig.json",
         "test": "jasmine --config=jasmine.json",
         "build": "tsc -p tsconfig.json",
         "watch": "tsc -w -p tsconfig.json",
