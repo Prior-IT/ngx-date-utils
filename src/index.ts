@@ -1,5 +1,5 @@
 import { getRelativeTimeString } from './relativeTimeString';
 
-export default {
+export {
     getRelativeTimeString,
 };
